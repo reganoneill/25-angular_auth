@@ -7,12 +7,23 @@ header {
     img{
       width: 3em;
       height: 3em;
-      outline: red dotted 2px;
+      margin: auto;
     }
     ul {
+      height: 100%;
+      width: 80%;
+      margin: auto;
       li {
+        float: left;
+        height: 100%;
         display: inline-block;
-        border: 1px yellow solid;
+        padding: auto 0;
+        &:first-child {
+          padding-top: 0.5em;
+        }
+        &:last-child {
+          padding: 1.5em;
+        }
       }
     }
 }
