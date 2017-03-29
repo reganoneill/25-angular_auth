@@ -1,0 +1,17 @@
+@import "../theme/vars";
+
+*{
+  box-sizing: border-box;
+}
+
+button {
+  padding: 3em;
+  width: 20%;
+  margin-right: 10em;
+  background: $site-primary;
+  color: $black;
+}
+
+body {
+  background: $site-secondary;
+}

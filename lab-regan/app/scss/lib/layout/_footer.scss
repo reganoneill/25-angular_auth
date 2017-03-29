@@ -1,7 +1,8 @@
 @import "../theme/vars";
  footer {
    position: fixed;
+   bottom: 0;
    height: 6em;
    width: 100%;
-   background: $site-primary;
+   background: $grey;
  }
