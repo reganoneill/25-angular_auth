@@ -1,0 +1,7 @@
+@import "../theme/vars";
+ footer {
+   position: fixed;
+   height: 6em;
+   width: 100%;
+   background: $site-primary;
+ }
