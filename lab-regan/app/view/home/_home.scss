@@ -1,0 +1,29 @@
+@import "../../scss/lib/theme/vars";
+
+.home {
+  background: $grey;
+
+  ul {
+    width: 100%;
+    li {
+      width: 80%;
+      margin: 2em auto;
+      background: $site-secondary;
+      padding: 0.75em;
+      border-radius: 8px;
+
+      span:nth-child(even){
+          display: block;
+        }
+      & > span {
+        margin: 1em 0;
+      }
+      // &:last-child::after {
+      //   margin-bottom: 15em;
+      // }
+      }
+.bolden {
+  font-weight: bold;
+ }
+ }
+}
