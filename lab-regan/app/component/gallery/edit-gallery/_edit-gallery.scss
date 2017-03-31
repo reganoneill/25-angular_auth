@@ -1,0 +1,24 @@
+@import "../../../scss/lib/theme/vars";
+
+
+edit-gallery {
+  .edit{
+    form{
+      fieldset {
+        background: $site-secondary;
+        width: 80%;
+        margin: auto;
+        span {
+          float: left;
+    font-weight: bold;
+        }
+        input {
+          float: right;
+        }
+      }
+    }
+  }
+  .btn-std {
+    height: 2.5em;
+  }
+}

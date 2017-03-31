@@ -2,10 +2,11 @@
   <create-gallery></create-gallery>
   <!-- <p>Galleries</p> -->
   <ul>
-    <li ng-repeat="gallery in homeCtrl.galleries">
+    <!-- <li ng-repeat="gallery in homeCtrl.galleries">
       <span><span class="bolden">name:</span> {{gallery.name}}</span>
       <span><span class="bolden">description:</span> {{gallery.desc}}</span>
       <span><span class="bolden">id:</span> {{gallery._id}}</span>
-    </li>
+    </li> -->
+    <gallery-item ng-repeat="item in homeCtrl.galleries" gallery="item"></gallery-item>
   </ul>
 </section>
