@@ -42,6 +42,7 @@ function authService($q, $log, $http, $window) {
       }
     };
 
+
     return $http.post(url, user, config)
     .then( res => {
       $log.log('success:', res.data);

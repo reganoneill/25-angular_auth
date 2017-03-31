@@ -20,7 +20,8 @@ function NavbarController($log, $location, $rootScope, authService){
       this.hideButtons = false;
       authService.getToken()
       .catch( () => {
-        $location.url('/join#login');
+        // $location.url('/join#login');
+        $location.url('/join#signup');
       });
     };
   };
