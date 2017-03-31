@@ -9,6 +9,8 @@
     border-radius: 8px;
     color: $site-primary;
     div{
+      margin: 0.75em 0;
+
       span{
         &:first-child{
           font-weight: bold;
@@ -33,6 +35,10 @@
         border-radius: 8px;
         margin: 0.5em 0;
         margin-bottom: 1.5em;
+        &:last-child{
+          background: $site-tertiary;
+          color: $black;
+        }
       }
     }
   }
