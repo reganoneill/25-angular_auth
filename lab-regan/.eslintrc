@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "no-console": "off",
+    "indent": [ "error", 2 ],
+    "quotes": [ "error", "single" ],
+    "semi": ["error", "always"],
+    "linebreak-style": [ "error", "unix" ]
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+
+Error: Parse error on line 11:
+...    "node": true,  },  "ecmaFeatures":
+----------------------^
+Expecting 'STRING'
+},
+  "ecmaFeatures": {
+    "modules": true,
+    "experimentalObjectRestSpread": true,
+    "impliedStrict": true
+  },
+  "extends": "eslint:recommended"
+}

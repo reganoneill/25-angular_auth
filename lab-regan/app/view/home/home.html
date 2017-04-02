@@ -1,0 +1,7 @@
+<section class="home">
+  <create-gallery></create-gallery>
+  <h2 ng-if="homeCtrl.galleries.length >= 1">Galleries</h2>
+  <ul>
+    <gallery-item ng-repeat="item in homeCtrl.galleries" gallery="item"></gallery-item>
+  </ul>
+</section>

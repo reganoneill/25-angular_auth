@@ -1,0 +1,9 @@
+@import "../theme/vars";
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background: $site-secondary;
+}

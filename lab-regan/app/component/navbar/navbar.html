@@ -1,0 +1,18 @@
+<section class="navbar">
+  <ul>
+    <li>
+      <img ng-src="/app/assets/cfLogo.png"/>
+    </li>
+    <li>
+      <h2>cf gram</h2>
+    </li>
+  </ul>
+  <nav>
+    <div ng-hide="navbarCtrl.hideButtons">
+      <button class="btn-std"
+        ng-click="navbarCtrl.logout()">
+          logout
+        </button>
+    </div>
+  </nav>
+</section>

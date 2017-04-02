@@ -1,0 +1,42 @@
+@import "../../../scss/lib/theme/vars";
+
+.edit {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.75em;
+  border-radius: 8px;
+  color: $site-primary;
+   div {
+     &:first-child{
+     background: $site-secondary;
+     border-radius: 6px;
+   },
+     &:nth-child(2){
+       text-align: right;
+     }
+     .btn-std{
+       margin-right: 0;
+     }
+   }
+    fieldset{
+      margin: 0.75em 0;
+
+      span{
+        float: left;
+        &:first-child{
+          font-weight: bold;
+        }
+      }
+      input .input-std {
+        float: left;
+        display: inline-block;
+        &:first-child {
+          border: 1px red dotted;
+          margin-left: 4%;
+        }
+      }
+      }
+    }
+    // & > span {
+    //   margin: 1em 0;
+    // }

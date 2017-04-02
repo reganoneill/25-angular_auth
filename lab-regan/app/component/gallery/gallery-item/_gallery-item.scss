@@ -1,0 +1,45 @@
+@import "../../../scss/lib/theme/vars";
+
+.gallery-item {
+  .current-item {
+    width: 80%;
+    margin: 0 auto;
+    background: $site-secondary;
+    padding: 0.75em;
+    border-radius: 8px;
+    color: $site-primary;
+    div{
+      margin: 0.75em 0;
+
+      span{
+        &:first-child{
+          font-weight: bold;
+        }
+      }
+    }
+    & > span {
+      margin: 1em 0;
+    }
+  }
+  .edit-container {
+    width: 100%;
+    div{
+      width: 80%;
+      margin: auto;
+      text-align: right;
+      span {
+        display: inline-block;
+        background: $site-primary;
+        color: $white;
+        padding: 0.25em 2em;
+        border-radius: 8px;
+        margin: 0.5em 0;
+        margin-bottom: 1.5em;
+        &:last-child{
+          background: $site-tertiary;
+          color: $black;
+        }
+      }
+    }
+  }
+}
