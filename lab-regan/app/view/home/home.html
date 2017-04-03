@@ -2,7 +2,9 @@
   <create-gallery></create-gallery>
   <h2 ng-if="homeCtrl.galleries.length >= 1">Galleries</h2>
   <ul>
-    <gallery-item ng-repeat="item in homeCtrl.galleries" gallery="item"></gallery-item>
+    <!-- <gallery-item ng-repeat="item in homeCtrl.galleries" gallery="item"></gallery-item> -->
+
+        <gallery-item ng-repeat="item in homeCtrl.galleries" gallery="item" delete-done="homeCtrl.galleryDeleteDone(galleryData)" ng-click="homeCtrl.currentGallery = item"></gallery-item>
   </ul>
   <!-- <div>
     <p>{{homeCtrl.galleries}}</p>

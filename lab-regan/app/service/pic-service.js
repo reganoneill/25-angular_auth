@@ -12,11 +12,12 @@ function picService($q, $log, $http, Upload, authService){
 
     return authService.getToken()
     .then( token => {
-      let url = `${__API_URL__}/api/gallery${galleryData._id}/pic`;
+      let url = `${__API_URL__}/api/gallery/${galleryData._id}/pic`;
       let headers = {
         'Authorization': `Bearer ${token}`,
         'Accept': 'application/json'
       };
+      console.log(`${token}`, '<----TOKEN');
       return Upload.upload({
         url,
         headers,
@@ -24,7 +25,7 @@ function picService($q, $log, $http, Upload, authService){
         data: {
           name: picData.name,
           desc: picData.desc,
-          file  picData.file
+          file: picData.file
         }
       });
     })
@@ -33,7 +34,7 @@ function picService($q, $log, $http, Upload, authService){
       return res.data;
     })
     .catch( err => {
-      $log.error(err.message);
+      $log.error(err.message, 'you lose!!!!!!!!!');
       return $q.reject(err);
     });
   };
