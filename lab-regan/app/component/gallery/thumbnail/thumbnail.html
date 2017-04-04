@@ -1,4 +1,5 @@
 <div class="thumbnail">
+  <!-- the imageURI property comes from s3 - try to log the entire pic to see all properties it has associated with it -->
   <img ng-src="{{ thumbnailCtrl.pic.imageURI }}" alt="{{ thumbnailCtrl.pic.desc }}">
   <span class="btn-std" ng-click="thumbnailCtrl.deletePic()">delete</span>
 </div>
