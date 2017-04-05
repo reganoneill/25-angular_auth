@@ -51,7 +51,6 @@ function galleryService($q, $log, $http, authService){
     })
     .then( res => {
       $log.log('galleries retrieved');
-
       service.galleries = res.data;
       return service.galleries;
     })
