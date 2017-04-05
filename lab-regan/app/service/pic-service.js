@@ -42,11 +42,11 @@ function picService($q, $log, $http, Upload, authService){
 
 
 
-  service.deletePic = function(picID){
+  service.deletePic = function(galleryData, picID){
     $log.debug('galleryService.deletePic');
     return authService.getToken()
     .then( token => {
-      let url = `${__API_URL__}/api/gallery/${galleryID}/pic/${picID}`;
+      let url = `${__API_URL__}/api/gallery/${galleryData._id}/pic/${picID}`;
       let config = {
         headers: {
           'Authorization': `Bearer ${token}`
@@ -55,14 +55,13 @@ function picService($q, $log, $http, Upload, authService){
       return $http.delete(url, config);
     })
     .then( res => {
-      // for(let i =0; i < service.galleries.length; i++){
-      //   let current = service.galleries[i];
-      //   if(current._id === galleryID){
-      //     service.galleries.splice(i, 1);
-      //     break;
-      //   };
-      // };
-      $log.debug('------------ PICSERVICE.DELETEPIC -----------')
+      for(let i=0; i<galleryData.pics.length; i++){
+        let current = galleryData.pics[i];
+        if(current._id == picID){
+          galleryData.pics.splice(i, 1);
+          break;
+        };
+      };
     })
     .catch( err => {
       $log.error(err.message);
