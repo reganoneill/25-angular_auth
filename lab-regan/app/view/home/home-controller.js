@@ -14,6 +14,7 @@ function HomeController($log, $rootScope, galleryService) {
     .then( galleries => {
       this.galleries = galleries;
       this.currentGallery = galleries[0];
+
     });
   };
 
@@ -25,7 +26,6 @@ function HomeController($log, $rootScope, galleryService) {
 
   this.fetchGalleries();
 
-//TODO: shouldn't this be causing the gallery thumbnail container to show once a gallery item gets generated/displayed onto the page? How can I make this happen?
   $rootScope.$on('$locationChangeSuccess', () => {
     this.fetchGalleries();
   });
