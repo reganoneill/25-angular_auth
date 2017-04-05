@@ -34,16 +34,13 @@ function picService($q, $log, $http, Upload, authService){
       return res.data;
     })
     .catch( err => {
-      $log.error(err.message, 'you lose!!!!!!!!!');
+      $log.error(err.message, 'you lose!');
       return $q.reject(err);
     });
   };
 
-
-
-
   service.deletePic = function(galleryData, picID){
-    $log.debug('galleryService.deletePic');
+    $log.debug('picService.deletePic');
     return authService.getToken()
     .then( token => {
       let url = `${__API_URL__}/api/gallery/${galleryData._id}/pic/${picID}`;
@@ -55,9 +52,10 @@ function picService($q, $log, $http, Upload, authService){
       return $http.delete(url, config);
     })
     .then( res => {
-      for(let i=0; i<galleryData.pics.length; i++){
+      console.log(res.status);
+      for(let i=0; i < galleryData.pics.length; i++){
         let current = galleryData.pics[i];
-        if(current._id == picID){
+        if(current._id === picID){
           galleryData.pics.splice(i, 1);
           break;
         };
@@ -68,9 +66,6 @@ function picService($q, $log, $http, Upload, authService){
       return $q.reject(err);
     });
   };
-
-
-
 
   return service;
 };
