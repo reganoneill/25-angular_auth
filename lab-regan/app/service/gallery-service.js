@@ -76,7 +76,7 @@ function galleryService($q, $log, $http, authService){
       return $http.put(url, galleryData, config);
     })
     .then( res => {
-      for( let i=0; i < service.galleries.length; i++){
+      for( let i = 0; i < service.galleries.length; i++){
         let current = service.galleries[i];
         if(current._id === galleryID){
           service.galleries[i] = res.data;
