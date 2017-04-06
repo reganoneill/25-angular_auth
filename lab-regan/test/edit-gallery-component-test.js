@@ -53,12 +53,11 @@ describe('Edit Gallery Component', function(){
       editGalleryCtrl.gallery.name = 'updated name';
       editGalleryCtrl.gallery.desc = 'updated description';
       editGalleryCtrl.updateGallery();
-      // .then( gallery => {
-        expect(editGalleryCtrl.gallery.name).toEqual('updated name');
-        expect(editGalleryCtrl.gallery.desc).toEqual('updated description');
-      // })
+      expect(editGalleryCtrl.gallery.name).toEqual('updated name');
+      expect(editGalleryCtrl.gallery.desc).toEqual('updated description');
 
-      // this.$httpBackend.flush();
+
+      this.$httpBackend.flush();
       this.$rootScope.$apply();
     });
   });
