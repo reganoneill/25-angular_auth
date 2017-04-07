@@ -1,10 +1,16 @@
 @import "../theme/vars";
 
-//TODO: REWORK SO IT DOESN'T INTERFERE WITH CONTENT
- // footer {
- //   position: fixed;
- //   bottom: 0;
- //   height: 1em;
- //   width: 100%;
- //   background: $grey;
- // }
+// footer {
+//   div{
+//     ul{
+//       li{
+//         &:first-child{
+//           // background: blue;
+//           background-image: url('../../../assets/fourIcons.png') no-repeat -268px -252px;
+//           width: 128px;
+//           height: 128px;
+//         }
+//       }
+//     }
+//   }
+// }
