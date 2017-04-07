@@ -40,6 +40,10 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
+      },
+      {
+        test: /\.png$/,
+        loader: 'url-loader'
       }
     ]
   }

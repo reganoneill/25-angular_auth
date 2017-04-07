@@ -1,0 +1,14 @@
+.social-media-icons {
+  ul {
+    li {
+      &:first-child{
+        // background: blue;
+        // background: url('../assets/fourIcons.png') no-repeat -268px -252px;
+        background: url('../../assets/spritesheet-icons.png');
+        width: 128px;
+        height: 128px;
+        background-position: -5px -5px;
+    }
+  }
+}
+}
