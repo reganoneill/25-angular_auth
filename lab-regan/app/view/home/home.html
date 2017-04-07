@@ -1,7 +1,7 @@
 <section class="home">
   <create-gallery></create-gallery>
 
-  <input type="text" placeholder="search for a gallery" ng-model="homeCtrl.gallerySearchTerm">
+  <input ng-if="homeCtrl.galleries.length >= 5" type="text" placeholder="search for a gallery" ng-model="homeCtrl.gallerySearchTerm">
 
   <h2 ng-if="homeCtrl.galleries.length >= 1">Galleries</h2>
   <ul>
