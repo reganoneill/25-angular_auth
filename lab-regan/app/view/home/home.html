@@ -4,8 +4,9 @@
   <input class="fuzzy-input" ng-if="homeCtrl.galleries.length >= 5" type="text" placeholder="search for a gallery" ng-model="homeCtrl.gallerySearchTerm">
 
   <h2 ng-if="homeCtrl.galleries.length >= 1">Galleries</h2>
+  <p>{{homeCtrl.galleries[0]}}</p>
   <ul>
-    <gallery-item ng-repeat="item in homeCtrl.galleries | gallerySearch: homeCtrl.gallerySearchTerm" gallery="item" delete-done="homeCtrl.galleryDeleteDone(galleryData)" ng-click="homeCtrl.currentGallery = item"></gallery-item>
+    <gallery-item ng-repeat="item in homeCtrl.galleries | gallerySearch: homeCtrl.gallerySearchTerm" gallery="item" delete-done="homeCtrl.galleryDeleteDone(item)" ng-click="homeCtrl.currentGallery = item"></gallery-item>
   </ul>
-  <thumbnail-container ng-if="homeCtrl.currentGallery" gallery="homeCtrl.currentGallery"></thumbnail-container>
+  <thumbnail-container ng-if="homeCtrl.galleries[0]" gallery="homeCtrl.currentGallery"></thumbnail-container>
 </section>
