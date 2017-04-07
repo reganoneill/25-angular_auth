@@ -16,5 +16,5 @@ module.exports = function(){
 };
 
 function SocialIconsController(){
-  this.icons = ['youtube', 'snapchat', 'instagram']
+  this.icons = ['snapchat', 'github', 'google', 'youtube']
 };

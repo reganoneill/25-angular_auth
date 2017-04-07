@@ -1,14 +1,33 @@
 .social-media-icons {
   ul {
     li {
+      float: left;
+      width: 128px;
+      height: 128px;
       &:first-child{
-        // background: blue;
-        // background: url('../assets/fourIcons.png') no-repeat -268px -252px;
-        background: url('../../assets/spritesheet-icons.png');
-        width: 128px;
-        height: 128px;
-        background-position: -5px -5px;
+        background: url('../assets/labicons9.png') no-repeat 0 0;
+      	width: 52px;
+      	height: 52px;
     }
+
+      &:nth-child(2) {
+        background: url('../assets/labicons9.png') no-repeat -60px 0;
+	      width: 52px;
+	      height: 52px;
+    }
+
+      &:nth-child(3) {
+        background: url('../assets/labicons9.png') no-repeat 0 -63px;
+      	width: 52px;
+      	height: 52px;
+    }
+
+    &:last-child {
+      background: url('../assets/labicons9.png') no-repeat -60px -63px;
+    	width: 52px;
+    	height: 52px;
+    }
+
   }
 }
 }
