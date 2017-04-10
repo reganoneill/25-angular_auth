@@ -24,10 +24,11 @@
   .edit-container {
     width: 100%;
     div{
-      width: 80%;
+      width: 90%;
       margin: auto;
+      margin-top: 0.25em;
       text-align: right;
-      span {
+      button {
         display: inline-block;
         background: $site-primary;
         color: $white;
@@ -35,9 +36,19 @@
         border-radius: 8px;
         margin: 0.5em 0;
         margin-bottom: 1.5em;
+        &:first-child{
+            &:hover{
+                background: $white;
+                color: $black;
+            }
+        }
         &:last-child{
           background: $site-tertiary;
           color: $black;
+          &:hover{
+              background: $black;
+              color: $white;
+          }
         }
       }
     }
