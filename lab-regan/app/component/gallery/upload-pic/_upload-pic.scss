@@ -1,5 +1,10 @@
 .upload-pic {
+	margin-bottom: 3em;
 	form{
+		.img-grabber {
+			text-decoration: underline;
+			cursor: pointer;
+		}
 		input{
 			margin: none;
 		}

@@ -44,7 +44,11 @@ module.exports = {
       {
         test: /\.png$/,
         loader: 'url-loader'
-      }
+    },
+    {
+        test: /\.(woff|woff2|tt|svg|eot).*/,
+        loader: 'url?limit=10000&name=image/[hash].[ext]'
+    }
     ]
   }
 };

@@ -1,6 +1,9 @@
 <section class="upload-pic">
+<uib-accordion>
+<div uib-accordion-group class="panel-default" heading="upload a new pic">
+
+
   <form ng-submit="uploadPicCtrl.uploadPic()" novalidate>
-    <h3>upload a new pic</h3>
     <fieldset>
       <input type="text" ng-model="uploadPicCtrl.pic.name" placeholder="name">
       <input type="text" ng-model="uploadPicCtrl.pic.desc" placeholder="description">
@@ -14,4 +17,7 @@
       <button class="btn-std">upload!</button>
     </div>
   </form>
+
+</div>
+</uib-accordion>
 </section>
