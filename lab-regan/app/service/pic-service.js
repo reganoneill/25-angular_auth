@@ -9,7 +9,7 @@ function picService($q, $log, $http, Upload, authService){
 
   service.uploadGalleryPic = function(galleryData, picData){
     $log.debug('service.uploadGalleryPic');
-
+    console.log(galleryData);
     return authService.getToken()
     .then( token => {
       let url = `${__API_URL__}/api/gallery/${galleryData._id}/pic`;
