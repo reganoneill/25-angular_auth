@@ -1,7 +1,18 @@
 .create-gallery{
+    margin-bottom: 2.5em;
   h2{
       padding-left: 10%;
-      margin-bottom: -2em;
-      padding-top: 2em;
+      margin-bottom: -1em;
+      padding-top: 1.5em;
+  }
+  form {
+      width: 90%;
+      margin: auto;
+      input {
+        width: 100%;
+      }
+      .btn-std {
+          width: 10%;
+      }
   }
 }

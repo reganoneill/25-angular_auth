@@ -4,7 +4,6 @@
   <input class="fuzzy-input" ng-if="homeCtrl.galleries.length >= 5" type="text" placeholder="search for a gallery" ng-model="homeCtrl.gallerySearchTerm">
 
   <h2 ng-if="homeCtrl.galleries.length >= 1">Galleries</h2>
-  <p>{{homeCtrl.galleries[0]}}</p>
   <ul>
     <gallery-item ng-repeat="item in homeCtrl.galleries | gallerySearch: homeCtrl.gallerySearchTerm" gallery="item" delete-done="homeCtrl.galleryDeleteDone(item)" ng-click="homeCtrl.currentGallery = item"></gallery-item>
   </ul>
