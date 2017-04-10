@@ -1,10 +1,15 @@
 // base
 @import "lib/base/reset";
+//bootstrap
+@import "lib/bootstrap/custom-bootstrap";
 @import "lib/base/base";
+
+
 // layout
 @import "lib/layout/header";
 @import "lib/layout/footer";
 @import "lib/layout/main";
+
 // components
 @import "../component/navbar/navbar";
 @import "../component/landing/signup/signup";
@@ -13,4 +18,6 @@
 @import "../component/gallery/edit-gallery/edit-gallery";
 @import "../component/gallery/create-gallery/create-gallery";
 @import "../component/gallery/thumbnail-container/thumbnail-container";
+
+// directive
 @import "../directive/social-icons";

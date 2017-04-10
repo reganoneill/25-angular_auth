@@ -1,6 +1,7 @@
 @import "../../../scss/lib/theme/vars";
 
 .edit {
+ form{
   width: 80%;
   margin: 0 auto;
   padding: 0.75em;
@@ -20,15 +21,16 @@
    }
     fieldset{
       margin: 0.75em 0;
-
+      padding: 0.5em;
       span{
+        margin-top: 0.75em; 
         float: left;
         &:first-child{
           font-weight: bold;
         }
       }
-      input .input-std {
-        float: left;
+      input{
+        // float: left;
         display: inline-block;
         &:first-child {
           border: 1px red dotted;
@@ -37,6 +39,7 @@
       }
       }
     }
+  }
     // & > span {
     //   margin: 1em 0;
     // }
