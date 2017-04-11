@@ -15,7 +15,9 @@ function UploadPicController($log, picService){
   $log.debug('UploadPicController');
 
   this.pic = {};
+  this.accOpen = false;
   this.uploadPic = function(){
+    this.accOpen = false;
     picService.uploadGalleryPic(this.gallery, this.pic)
     .then( (returnobj) => {
       this.pic.name = null;

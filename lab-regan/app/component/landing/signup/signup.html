@@ -6,28 +6,37 @@
     <h3>sign up</h3>
     <input class="input-std"
       type="text"
+      name="userName"
       placeholder="name"
       ng-minlength="4"
+      ng-maxlength="8"
       ng-model="signupCtrl.user.username" required>
-
+      <div class="formChecker" ng-messages="signupForm.userName.$error">
+          <p ng-message="minlength">Must be at least 4 characters</p>
+          <p ng-message="maxlength">Must be less than 8 characters</p>
+      </div>
     <input class="input-std"
       type="email"
+      name="userEmail"
       placeholder="email"
       ng-model="signupCtrl.user.email">
+
+      <div class="formChecker" ng-messages="signupForm.userEmail.$error">
+          <p ng-message="email">Must be a valid email</p>
+      </div>
 
     <input class="input-std"
       type="password"
       name="signinField"
       placeholder="password"
       ng-minlength="8"
-      uib-tooltip="Password must be at least 8 characters" tooltip-trigger="'focus'"
       ng-model="signupCtrl.user.password" required>
-
+      <div class="formChecker" ng-messages="signupForm.signinField.$error">
+          <p ng-message="minlength">Password must be at least 8 characters</p>
+      </div>
     <input type="submit" class="btn-std" ng-disabled="signupForm.$invalid" value="sign up">
     <!-- alternative method:  <p ng-show="signupForm.password.$error.minlength">You Are Doing It Wrong.</p> -->
-    <div ng-messages="signupForm.signinField.$error">
-        <p ng-message="minlength">Password must be at least 8 characters</p>
-    </div>
+
   </form>
   <!-- <div><p>already a member?<span>sign in here</span></p></div> -->
 </section>
