@@ -1,5 +1,6 @@
 <section class="signup">
   <form class="signup-form"
+    name="signupForm"
     ng-submit="signupCtrl.signup(signupCtrl.user)"
     novalidate>
     <h3>sign up</h3>
@@ -16,12 +17,17 @@
 
     <input class="input-std"
       type="password"
+      name="signinField"
       placeholder="password"
       ng-minlength="8"
-      uib-tooltip="Password must be at least 8 characters"
+      uib-tooltip="Password must be at least 8 characters" tooltip-trigger="'focus'"
       ng-model="signupCtrl.user.password" required>
 
-    <input type="submit" class="btn-std" value="sign up">
+    <input type="submit" class="btn-std" ng-disabled="signupForm.$invalid" value="sign up">
+    <!-- alternative method:  <p ng-show="signupForm.password.$error.minlength">You Are Doing It Wrong.</p> -->
+    <div ng-messages="signupForm.signinField.$error">
+        <p ng-message="minlength">Password must be at least 8 characters</p>
+    </div>
   </form>
   <!-- <div><p>already a member?<span>sign in here</span></p></div> -->
 </section>
