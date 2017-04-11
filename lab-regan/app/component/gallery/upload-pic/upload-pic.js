@@ -17,12 +17,12 @@ function UploadPicController($log, picService){
   this.pic = {};
   this.accOpen = false;
   this.uploadPic = function(){
-    this.accOpen = false;
     picService.uploadGalleryPic(this.gallery, this.pic)
     .then( (returnobj) => {
       this.pic.name = null;
       this.pic.desc = null;
       this.pic.file = null;
+      this.accOpen = false;
     });
   };
 };
